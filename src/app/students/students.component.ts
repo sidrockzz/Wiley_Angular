@@ -15,6 +15,11 @@ export class StudentsComponent implements OnInit {
     age: 22,
     location: 'Bangalore'
   };
+  faculty: Person = {
+    name: 'Akash',
+    age: 23,
+    location: 'Bangalore'
+  };
   constructor() { }
 
   ngOnInit(): void {
