@@ -1,11 +1,10 @@
-<h2> This is {{Sname | uppercase}}</h2>
-<h3> My age is {{Age | currency}}</h3>
-<p> I study in the {{Faculty1 |lowercase}} stream</p>
-<hr>
-<h2>This is {{person.name}}</h2>
-<h3>My age is {{person.age}}</h3>
-<p>I study at {{person.location}}</p>
-<hr>
-<h2> This is {{faculty.name}}</h2>
-<h3> My age is {{faculty.age}}</h3>
-<p> I study in the {{faculty.location}}</p>
+<h2>My Students</h2>
+<ul *ngIf="student">
+  <div *ngFor="let s of student">
+    <li *ngIf="s.age<20">
+      <span>{{s.name}}</span>
+      <span>{{s.age}}</span>
+      <span>{{s.location}}</span>
+    </li>
+  </div>
+</ul>

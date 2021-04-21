@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Person} from '../Person';
+import {Students} from '../mock-students';
 
 @Component({
   selector: 'app-students',
@@ -7,23 +8,11 @@ import {Person} from '../Person';
   styleUrls: ['./students.component.css']
 })
 export class StudentsComponent implements OnInit {
-  Sname = 'Sid ';
-  Age = 22;
-  Faculty1 = 'Engineering';
-  person: Person = {
-    name: 'Siddharth',
-    age: 22,
-    location: 'Bangalore'
-  };
-  faculty: Person = {
-    name: 'Akash',
-    age: 23,
-    location: 'Bangalore'
-  };
+  student = Students;
+
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }
 
