@@ -1,6 +1,8 @@
 <h2>Top Students</h2>
 <div class="students-menu">
   <a *ngFor="let stud of students">
+    <a routerLink="/detail/{{stud.age}}">
+      <span class="badge">{{stud.age}}</span> {{stud.name}}
     {{stud.name}}
   </a>
 </div>
