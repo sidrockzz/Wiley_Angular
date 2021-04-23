@@ -12,11 +12,15 @@ export class StudentsComponent implements OnInit {
   selectedStudent ?: Person;
   student: Person[] = [];
   // tslint:disable-next-line:variable-name
-  constructor(private stu_service: StudentsService) {
-    this.student = this.stu_service.getStudents();
-  }
+  constructor(private stu_service: StudentsService) { }
+    getStudent(): void {
+    this.stu_service.getStudents().subscribe(
+        stud => this.student = stud
+      );
+    }
 
   ngOnInit(): void {
+    this.getStudent();
   }
   onSelect(p: Person): void{
     this.selectedStudent = p;
