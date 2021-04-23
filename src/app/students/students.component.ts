@@ -25,7 +25,8 @@ export class StudentsComponent implements OnInit {
   }
   onSelect(p: Person): void{
     this.selectedStudent = p;
-    this.messageService.add('Select student to be added: {$p}');
+    // tslint:disable-next-line:typedef no-shadowed-variable
+    this.messageService.add('Select student to be added: '.concat(p.name));
   }
 }
 
